@@ -1,0 +1,21 @@
+## Xcode
+build/
+DerivedData/
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+*.xcuserdatad
+*.xccheckout
+xcuserdata/
+
+## CocoaPods
+Pods/
+Podfile.lock
+
+## Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+
+## General
+.DS_Store

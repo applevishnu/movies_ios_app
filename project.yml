@@ -1,0 +1,34 @@
+name: movies_ios_app
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: "14.0"
+  xcodeVersion: "15.0"
+targets:
+  movies_ios_app:
+    type: application
+    platform: iOS
+    sources:
+      - path: movies_ios_app
+    settings:
+      base:
+        PRODUCT_NAME: movies_ios_app
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.moviesiosapp
+        INFOPLIST_FILE: movies_ios_app/Info.plist
+        SWIFT_VERSION: "5.0"
+        ENABLE_BITCODE: "NO"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        TARGETED_DEVICE_FAMILY: "1,2"
+  movies_ios_appUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: movies_ios_appUITests
+    dependencies:
+      - target: movies_ios_app
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.moviesiosapp.uitests
+        INFOPLIST_FILE: movies_ios_appUITests/Info.plist
+        SWIFT_VERSION: "5.0"
+        TEST_TARGET_NAME: movies_ios_app
